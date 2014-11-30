@@ -1,7 +1,7 @@
 CacheAnnotation
 ===============
 
-Cache as annotation
+@Cache to cache variables in a cache (hashmap)
 
 License
 ==========
