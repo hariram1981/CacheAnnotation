@@ -16,6 +16,6 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.FIELD)
 public @interface Cache {
-	String key();
-	long refreshRate();
+	String key() default "";
+	long refreshRate() default 3600;
 }
