@@ -2,6 +2,8 @@ package com.hariram.annotation.cache;
 
 import java.lang.reflect.Field;
 
+import org.apache.log4j.Logger;
+
 import com.hariram.annotation.AnnotationException;
 import com.hariram.annotation.AnnotationProcessor;
 import com.hariram.cache.CacheManager;
@@ -13,10 +15,13 @@ import com.hariram.cache.CacheRefresh;
  */
 public class CacheAnnotationProcessor implements AnnotationProcessor {
 
+	public static final Logger LOGGER = Logger.getLogger(CacheAnnotationProcessor.class);
+	
 	/**
 	 * 
 	 */
 	public void process(Object obj) throws AnnotationException {
+		LOGGER.info("CacheAnnotationProcessor.process, obj: " + obj);
 		Class<? extends Object> objClass = obj.getClass();
 		
 		for(Field field: objClass.getFields()) {
@@ -33,6 +38,7 @@ public class CacheAnnotationProcessor implements AnnotationProcessor {
 				}
 			}
 		}
+		LOGGER.info("CacheAnnotationProcessor.process, done");
 	}
 
 	@Override
