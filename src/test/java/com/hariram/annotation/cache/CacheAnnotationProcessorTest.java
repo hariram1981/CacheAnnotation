@@ -25,7 +25,10 @@ public class CacheAnnotationProcessorTest {
 			processor.process(new CacheSample());
 			Object obj = CacheManager.getFromCache("data");
 			System.out.println(obj);
-			assertTrue(obj != null);
+			
+			Object obj1 = CacheManager.getFromCache("d1");
+			System.out.println(obj1);
+			assertTrue(obj != null && obj1 != null);
 		} catch (AnnotationException e) {
 			// TODO Auto-generated catch block
 			assertTrue(false);

@@ -14,4 +14,7 @@ import com.hariram.annotation.cache.Cache;
 public class CacheSample {
 	@Cache(refreshRate=60)
 	public static String data = "abc";
+	
+	@Cache(key="d1",refreshRate=60)
+	public static String data1 = "data1";
 }
