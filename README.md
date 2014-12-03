@@ -37,7 +37,7 @@ Usage
 - The below code has to be set either in static block for static variables or in constructor for class variables:
 
 		AnnotationProcessor processor = new CacheAnnotationProcessor();
-		processor.process(new CacheSample());
+		processor.process(new <class name>());
 
 License
 ==========
