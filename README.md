@@ -36,10 +36,8 @@ Usage
 
 - The below code has to be set either in static block for static variables or in constructor for class variables:
 
-		AnnotationProcessor processor = new PropertyAnnotationProcessor();
-		processor.process(<class instance[this,new <classname>()>);
-		//processor.process(this) - for class variables and called in MyClass()
-		//processor.process(new MyClass() - for static variables of MyClass
+		AnnotationProcessor processor = new CacheAnnotationProcessor();
+		processor.process(new CacheSample());
 
 License
 ==========
