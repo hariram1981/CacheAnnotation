@@ -1,3 +1,5 @@
 0.1 - Initial version
     - added cache annotation
 0.2 - Added logging using Log4J
+0.3 - Changing getFields to getDeclaredFields to support private variables
+      being read through reflection
