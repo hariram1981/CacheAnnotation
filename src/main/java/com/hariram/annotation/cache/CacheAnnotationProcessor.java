@@ -24,7 +24,8 @@ public class CacheAnnotationProcessor implements AnnotationProcessor {
 		LOGGER.info("CacheAnnotationProcessor.process, obj: " + obj);
 		Class<? extends Object> objClass = obj.getClass();
 		
-		for(Field field: objClass.getFields()) {
+		for(Field field: objClass.getDeclaredFields()) {
+			field.setAccessible(true);
 			if(field.isAnnotationPresent(Cache.class)) {
 				Cache cache = field.getAnnotation(Cache.class);
 				try {
