@@ -3,3 +3,4 @@
 0.2 - Added logging using Log4J
 0.3 - Changing getFields to getDeclaredFields to support private variables
       being read through reflection
+1.0 - Releasing stable version 1.0      

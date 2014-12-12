@@ -6,7 +6,7 @@ apply plugin: 'maven'
 uploadArchives {
 	repositories.mavenDeployer {
 		repository(url: "file:///home/hariram/Personal/github/maven-repo-snapshot")
-		pom.version = '0.3'
+		pom.version = '1.0'
 		pom.artifactId = 'cacheannotation'
 		pom.groupId = 'com.hariram'
 	}
@@ -14,7 +14,7 @@ uploadArchives {
 
 jar {
     baseName = 'cacheannotation'
-    version =  '0.3'
+    version =  '1.0'
 }
 
 repositories {
